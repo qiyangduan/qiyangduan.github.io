@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>开发插件 | VuePress</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/dispatch_doc/logo.png">
+    <link rel="manifest" href="/dispatch_doc/manifest.json">
+    <link rel="apple-touch-icon" href="/dispatch_doc/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/dispatch_doc/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="Vue 驱动的静态网站生成器">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/dispatch_doc/assets/css/0.styles.9af3f509.css" as="style"><link rel="preload" href="/dispatch_doc/assets/js/app.81ba9a05.js" as="script"><link rel="preload" href="/dispatch_doc/assets/js/5.7e583869.js" as="script"><link rel="preload" href="/dispatch_doc/assets/js/77.aa67d8e2.js" as="script"><link rel="preload" href="/dispatch_doc/assets/js/9.64ad410c.js" as="script"><link rel="prefetch" href="/dispatch_doc/assets/js/10.c5cefc44.js"><link rel="prefetch" href="/dispatch_doc/assets/js/11.daa813ad.js"><link rel="prefetch" href="/dispatch_doc/assets/js/12.40f255dc.js"><link rel="prefetch" href="/dispatch_doc/assets/js/13.7c857f34.js"><link rel="prefetch" href="/dispatch_doc/assets/js/14.4658a56f.js"><link rel="prefetch" href="/dispatch_doc/assets/js/15.a1541954.js"><link rel="prefetch" href="/dispatch_doc/assets/js/16.31216889.js"><link rel="prefetch" href="/dispatch_doc/assets/js/17.ee79c101.js"><link rel="prefetch" href="/dispatch_doc/assets/js/18.d666d670.js"><link rel="prefetch" href="/dispatch_doc/assets/js/19.c3c1f1df.js"><link rel="prefetch" href="/dispatch_doc/assets/js/20.fdaa84e5.js"><link rel="prefetch" href="/dispatch_doc/assets/js/21.45b50eec.js"><link rel="prefetch" href="/dispatch_doc/assets/js/22.bb880e39.js"><link rel="prefetch" href="/dispatch_doc/assets/js/23.541b0c5e.js"><link rel="prefetch" href="/dispatch_doc/assets/js/24.83cb4737.js"><link rel="prefetch" href="/dispatch_doc/assets/js/25.9ac36afb.js"><link rel="prefetch" href="/dispatch_doc/assets/js/26.2556396f.js"><link rel="prefetch" href="/dispatch_doc/assets/js/27.a6b1b106.js"><link rel="prefetch" href="/dispatch_doc/assets/js/28.712da876.js"><link rel="prefetch" href="/dispatch_doc/assets/js/29.8ef0eea0.js"><link rel="prefetch" href="/dispatch_doc/assets/js/30.297a39d8.js"><link rel="prefetch" href="/dispatch_doc/assets/js/31.e87daaa0.js"><link rel="prefetch" href="/dispatch_doc/assets/js/32.f492a8bf.js"><link rel="prefetch" href="/dispatch_doc/assets/js/33.290b1995.js"><link rel="prefetch" href="/dispatch_doc/assets/js/34.a10e0c4b.js"><link rel="prefetch" href="/dispatch_doc/assets/js/35.b070e79c.js"><link rel="prefetch" href="/dispatch_doc/assets/js/36.1aa55ad1.js"><link rel="prefetch" href="/dispatch_doc/assets/js/37.5ae5dab7.js"><link rel="prefetch" href="/dispatch_doc/assets/js/38.c12a878e.js"><link rel="prefetch" href="/dispatch_doc/assets/js/39.3e328c19.js"><link rel="prefetch" href="/dispatch_doc/assets/js/40.d9020a8f.js"><link rel="prefetch" href="/dispatch_doc/assets/js/41.6e8abdf2.js"><link rel="prefetch" href="/dispatch_doc/assets/js/42.5c313b9b.js"><link rel="prefetch" href="/dispatch_doc/assets/js/43.1e863d1f.js"><link rel="prefetch" href="/dispatch_doc/assets/js/44.6d29ff27.js"><link rel="prefetch" href="/dispatch_doc/assets/js/45.12fb9aa6.js"><link rel="prefetch" href="/dispatch_doc/assets/js/46.2c1c0ebd.js"><link rel="prefetch" href="/dispatch_doc/assets/js/47.bd2e7438.js"><link rel="prefetch" href="/dispatch_doc/assets/js/48.569e4c4b.js"><link rel="prefetch" href="/dispatch_doc/assets/js/49.e19cfa89.js"><link rel="prefetch" href="/dispatch_doc/assets/js/50.2d38d4af.js"><link rel="prefetch" href="/dispatch_doc/assets/js/51.d862b83c.js"><link rel="prefetch" href="/dispatch_doc/assets/js/52.d169699a.js"><link rel="prefetch" href="/dispatch_doc/assets/js/53.e6d3e7af.js"><link rel="prefetch" href="/dispatch_doc/assets/js/54.abca1538.js"><link rel="prefetch" href="/dispatch_doc/assets/js/55.d5e5315d.js"><link rel="prefetch" href="/dispatch_doc/assets/js/56.48034086.js"><link rel="prefetch" href="/dispatch_doc/assets/js/57.bac6d1ef.js"><link rel="prefetch" href="/dispatch_doc/assets/js/58.12e1669c.js"><link rel="prefetch" href="/dispatch_doc/assets/js/59.3b6d57d2.js"><link rel="prefetch" href="/dispatch_doc/assets/js/6.c6c7bcc9.js"><link rel="prefetch" href="/dispatch_doc/assets/js/60.b628c377.js"><link rel="prefetch" href="/dispatch_doc/assets/js/61.fc1adcf5.js"><link rel="prefetch" href="/dispatch_doc/assets/js/62.c1147587.js"><link rel="prefetch" href="/dispatch_doc/assets/js/63.3747ccb1.js"><link rel="prefetch" href="/dispatch_doc/assets/js/64.c6275a68.js"><link rel="prefetch" href="/dispatch_doc/assets/js/65.e271f5c9.js"><link rel="prefetch" href="/dispatch_doc/assets/js/66.4b22dd18.js"><link rel="prefetch" href="/dispatch_doc/assets/js/67.127080b0.js"><link rel="prefetch" href="/dispatch_doc/assets/js/68.1b12f24c.js"><link rel="prefetch" href="/dispatch_doc/assets/js/69.3caf115b.js"><link rel="prefetch" href="/dispatch_doc/assets/js/7.42b57d39.js"><link rel="prefetch" href="/dispatch_doc/assets/js/70.8c51f452.js"><link rel="prefetch" href="/dispatch_doc/assets/js/71.b78a98b8.js"><link rel="prefetch" href="/dispatch_doc/assets/js/72.942540db.js"><link rel="prefetch" href="/dispatch_doc/assets/js/73.d1c604cc.js"><link rel="prefetch" href="/dispatch_doc/assets/js/74.6ad36dc7.js"><link rel="prefetch" href="/dispatch_doc/assets/js/75.c2e09dc5.js"><link rel="prefetch" href="/dispatch_doc/assets/js/76.b63e6d29.js"><link rel="prefetch" href="/dispatch_doc/assets/js/78.69575ed1.js"><link rel="prefetch" href="/dispatch_doc/assets/js/79.7b219a90.js"><link rel="prefetch" href="/dispatch_doc/assets/js/8.004a9f91.js"><link rel="prefetch" href="/dispatch_doc/assets/js/80.d8772c44.js"><link rel="prefetch" href="/dispatch_doc/assets/js/81.8eb0b4c1.js"><link rel="prefetch" href="/dispatch_doc/assets/js/82.6fbba10c.js"><link rel="prefetch" href="/dispatch_doc/assets/js/83.8c3e2391.js"><link rel="prefetch" href="/dispatch_doc/assets/js/84.65daff9d.js"><link rel="prefetch" href="/dispatch_doc/assets/js/85.1f23f3fd.js"><link rel="prefetch" href="/dispatch_doc/assets/js/vendors~docsearch.b3708bf9.js"><link rel="prefetch" href="/dispatch_doc/assets/js/vendors~flowchart.3e13309c.js"><link rel="prefetch" href="/dispatch_doc/assets/js/vendors~notification.11c6c6d5.js">
+    <link rel="stylesheet" href="/dispatch_doc/assets/css/0.styles.9af3f509.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/dispatch_doc/zh/" class="home-link router-link-active"><!----> <span class="site-name">VuePress</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dispatch_doc/zh/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/dispatch_doc/zh/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/dispatch_doc/zh/plugin/" class="nav-link router-link-active">
+  插件
+</a></div><div class="nav-item"><a href="/dispatch_doc/zh/theme/" class="nav-link">
+  主题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dispatch_doc/zh/api/cli.html" class="nav-link">
+  CLI
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/api/node.html" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/local-development.html" class="nav-link">
+  本地开发
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/design-concepts.html" class="nav-link">
+  设计理念
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/glossary.html" class="nav-link">
+  术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/migration-guide.html" class="nav-link">
+  从 0.x 迁移
+</a></li><li class="dropdown-subitem"><a href="https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Changelog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://v0.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  0.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dispatch_doc/plugin/writing-a-plugin.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/dispatch_doc/zh/plugin/writing-a-plugin.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/alibaba/easydispatch" target="_blank" rel="noopener noreferrer" class="repo-link">
+    source
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dispatch_doc/zh/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/dispatch_doc/zh/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/dispatch_doc/zh/plugin/" class="nav-link router-link-active">
+  插件
+</a></div><div class="nav-item"><a href="/dispatch_doc/zh/theme/" class="nav-link">
+  主题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dispatch_doc/zh/api/cli.html" class="nav-link">
+  CLI
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/api/node.html" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/local-development.html" class="nav-link">
+  本地开发
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/design-concepts.html" class="nav-link">
+  设计理念
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/glossary.html" class="nav-link">
+  术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dispatch_doc/zh/miscellaneous/migration-guide.html" class="nav-link">
+  从 0.x 迁移
+</a></li><li class="dropdown-subitem"><a href="https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Changelog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://v0.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  0.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dispatch_doc/plugin/writing-a-plugin.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/dispatch_doc/zh/plugin/writing-a-plugin.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/alibaba/easydispatch" target="_blank" rel="noopener noreferrer" class="repo-link">
+    source
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>插件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dispatch_doc/zh/plugin/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/dispatch_doc/zh/plugin/using-a-plugin.html" class="sidebar-link">使用插件</a></li><li><a href="/dispatch_doc/zh/plugin/writing-a-plugin.html" aria-current="page" class="active sidebar-link">开发插件</a></li><li><a href="/dispatch_doc/zh/plugin/life-cycle.html" class="sidebar-link">生命周期</a></li><li><a href="/dispatch_doc/zh/plugin/option-api.html" class="sidebar-link">Option API</a></li><li><a href="/dispatch_doc/zh/plugin/context-api.html" class="sidebar-link">Context API</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>官方插件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dispatch_doc/zh/plugin/official/plugin-active-header-links.html" class="sidebar-link">active-header-links</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-back-to-top.html" class="sidebar-link">back-to-top</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-blog.html" class="sidebar-link">blog</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-google-analytics.html" class="sidebar-link">google-analytics</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-last-updated.html" class="sidebar-link">last-updated</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-medium-zoom.html" class="sidebar-link">medium-zoom</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-nprogress.html" class="sidebar-link">nprogress</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-pwa.html" class="sidebar-link">pwa</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-register-components.html" class="sidebar-link">register-components</a></li><li><a href="/dispatch_doc/zh/plugin/official/plugin-search.html" class="sidebar-link">search</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="开发插件"><a href="#开发插件" class="header-anchor">#</a> 开发插件</h1> <p>一个插件应该导出一个普通的 JavaScript 对象（<code>#1</code>），如果插件需要接受配置选项，那么它可以是一个返回对象的函数（<code>#2</code>），这个函数接受插件的配置选项为第一个参数、包含编译期上下文的 <a href="/dispatch_doc/zh/plugin/context-api.html">ctx</a> 对象作为第二个参数。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// #1</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+   <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// #2</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> ctx</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ...</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">提示</p> <p>一个 VuePress 插件应该是一个 <code>CommonJS 模块</code>，因为 VuePress 插件运行在 Node 端。</p></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/alibaba/easydispatch/edit/master/packages/docs/docs/zh/plugin/writing-a-plugin.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/6/7 下午11:15:14</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dispatch_doc/zh/plugin/using-a-plugin.html" class="prev">
+        使用插件
+      </a></span> <span class="next"><a href="/dispatch_doc/zh/plugin/life-cycle.html">
+        生命周期
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/dispatch_doc/assets/js/app.81ba9a05.js" defer></script><script src="/dispatch_doc/assets/js/5.7e583869.js" defer></script><script src="/dispatch_doc/assets/js/77.aa67d8e2.js" defer></script><script src="/dispatch_doc/assets/js/9.64ad410c.js" defer></script>
+  </body>
+</html>
