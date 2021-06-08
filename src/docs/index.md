@@ -6,8 +6,8 @@ footer: Apache Licensed
 
 <div class="features">
   <div class="feature">
-    <h2>Real Time</h2>
-    <p>Dispatch jobs to best-fitting workers in seconds.</p>
+    <h2>Unified Framework</h2>
+    <p>Including three types of algorithms(Heuristic, Optimization, Reinforcement Learning) in one dispatching platform.</p>
   </div>
   <div class="feature">
     <h2>Flexible Business Rules</h2>

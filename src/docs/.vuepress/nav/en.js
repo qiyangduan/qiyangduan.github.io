@@ -1,31 +1,36 @@
 module.exports = [
   {
     text: 'Quickstart & Tutorial',
-    link: '/doc/'
+    link: '/guide/'
   },
   {
     text: 'Document',
     items: [
       {
-        text: 'Installation',
-        link: '/miscellaneous/local-development.html'
+        text: 'API Spec', 
+        link: 'https://londondemo1.dispatch.kandbox.com/api/v1/docs/'
+      },
+      {
+        text: 'Introduction',
+        link: '/doc/'
       },
       {
         text: 'Concepts',
-        link: '/miscellaneous/design-concepts.html'
+        link: '/doc/concept.html'
       },
       {
-        text: 'API Spec', 
-        link: 'https://londondemo1.dispatch.kandbox.com/api/v1/docs/'
+        text: 'Installation',
+        link: '/doc/install'
       },
       {
         text: 'FAQ',
         link: '/faq/'
       },
-      {
-        text: 'Glossary',
-        link: '/miscellaneous/glossary.html'
-      }
+      // ,
+      // {
+      //   text: 'Glossary',
+      //   link: '/miscellaneous/glossary.html'
+      // }
     ]
   }
 ]

@@ -7,7 +7,7 @@ module.exports = ctx => ({
     '/': {
       lang: 'en-US',
       title: 'EasyDispatch',
-      description: 'Realtime Field Service Dispatcher'
+      description: 'Realtime Field Service Dispatcher, in seconds'
     },
     '/zh/': {
       lang: 'zh-CN',
@@ -28,8 +28,8 @@ module.exports = ctx => ({
   ],
   theme: '@vuepress/default',
   themeConfig: {
-    repo: 'alibaba/easydispatch',
-    repoLabel:'source',
+    // repo: 'alibaba/easydispatch',
+    // repoLabel:'source',
     editLinks: true,
     docsDir: 'packages/docs/docs',
     // #697 Provided by the official algolia team.
