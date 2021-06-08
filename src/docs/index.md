@@ -1,26 +1,20 @@
 ---
 home: true
-heroImage: /hero.png
-actionText: Get Started →
-actionLink: /guide/getting-started.html
-footer: MIT Licensed | Copyright © 2018-present Evan You
+heroImage: /planner_gantt_20210504215543.jpg
+footer: Apache Licensed
 ---
-
-<div style="text-align: center">
-  <Bit/>
-</div>
 
 <div class="features">
   <div class="feature">
-    <h2>Simplicity First</h2>
-    <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
+    <h2>Real Time</h2>
+    <p>Dispatch jobs to best-fitting workers in seconds.</p>
   </div>
   <div class="feature">
-    <h2>Vue-Powered</h2>
-    <p>Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.</p>
+    <h2>Flexible Business Rules</h2>
+    <p>Rules plugins can be embedded into core engine to specify what is allowed and leave engine to decide how to reach a solution.</p>
   </div>
   <div class="feature">
-    <h2>Performant</h2>
-    <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
+    <h2>Explainable AI</h2>
+    <p>Clear objective scoring and business rule visualization for each worker-job assignment candidates.</p>
   </div>
 </div>

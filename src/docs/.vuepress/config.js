@@ -1,18 +1,18 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  dest: '../dist',
+  dest: '../docs',
   // base: '/dispatch_doc/',
   locales: {
     '/': {
       lang: 'en-US',
       title: 'EasyDispatch',
-      description: 'Vue-powered Static Site Generator'
+      description: 'Realtime Field Service Dispatcher'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'EasyDispatch',
+      description: 'AI实时服务派单'
     }
   },
   head: [
