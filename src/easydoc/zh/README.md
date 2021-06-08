@@ -1,34 +1,21 @@
 ---
 home: true
-heroImage: /hero.png
-actionText: 快速上手 →
-actionLink: /zh/guide/
-features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue 驱动
-  details: 享受 Vue + webpack 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+heroImage: /planner_gantt_20210504215543.jpg
+footer: Apache 许可证
 ---
 
-### 像数 1, 2, 3 一样容易
 
-``` bash
-# 安装
-yarn global add vuepress # 或者：npm install -g vuepress
-
-# 新建一个 markdown 文件
-echo '# Hello VuePress!' > README.md
-
-# 开始写作
-vuepress dev .
-
-# 构建静态文件
-vuepress build .
-```
-
-::: warning 注意
-请确保你的 Node.js 版本 >= 8.6。
-:::
+<div class="features">
+  <div class="feature">
+    <h2>统一框架</h2>
+    <p>同一个框架支持启发式，求解器，强化学习三种算法配合使用.</p>
+  </div>
+  <div class="feature">
+    <h2>业务灵活配置</h2>
+    <p>灵活的业务规则插件，指定允许的调度，但不需要指定如何达成最终方案，AI负责找到路径</p>
+  </div>
+  <div class="feature">
+    <h2>可见可解释的AI</h2>
+    <p>每个worker和job的配置可以可视化查看，给业务人员合理解释</p>
+  </div>
+</div>
