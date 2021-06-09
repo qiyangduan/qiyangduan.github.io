@@ -7,7 +7,7 @@ module.exports = ctx => ({
     '/': {
       lang: 'en-US',
       title: 'EasyDispatch',
-      description: 'Realtime Field Service Dispatcher, in seconds'
+      description: 'Realtime Field Service Dispatcher in Seconds'
     },
     '/zh/': {
       lang: 'zh-CN',

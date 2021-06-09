@@ -19,6 +19,10 @@ module.exports = [
         link: '/zh/doc/concept.html'
       },
       {
+        text: '业务规则系统',
+        link: '/zh/doc/business-rules/'
+      },
+      {
         text: '安装指南',
         link: '/zh/doc/install'
       },

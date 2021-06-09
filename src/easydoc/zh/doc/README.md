@@ -15,7 +15,7 @@ sidebar: auto
 - 排班甘特图，基于echarts的，能同时显示在途时间的Gantt/Timeline图
 - 所有界面操作有API，API优先。
 
-可以点击[快速开始]](/zh/guide/)啦 :).
+点击[快速开始](/zh/guide/)可以先尝试一下啦 :).
 
 
 
