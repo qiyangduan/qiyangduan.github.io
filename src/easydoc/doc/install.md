@@ -47,4 +47,4 @@ We recommend having three environments for production deployment:
 
 The following architecture diagram is one example for production deployment in kubernetes:
 
-![deploy_arch](/login_page_20210608174032.jpg)
+![deploy_arch](/arch_20210809223352.jpg)
