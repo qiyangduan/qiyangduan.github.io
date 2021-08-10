@@ -36,3 +36,15 @@ python -m dispatch.cli server start --port 8000 dispatch.main:app
 
 
 ![login_page](/login_page_20210608174032.jpg)
+
+# Recommended Deployment Architecture
+We recommend having three environments for production deployment:
+
+- test : you can follow above steps to install composite&docker based single VM instance.
+- staging: use kubernetes cluster to deploy minimal instance.
+- production: use kubernetes cluster to deploy instance according to production workload.
+
+
+The following architecture diagram is one example for production deployment in kubernetes:
+
+![deploy_arch](/login_page_20210608174032.jpg)
