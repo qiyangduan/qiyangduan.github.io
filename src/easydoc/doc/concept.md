@@ -18,7 +18,7 @@ EasyDispatch is a field service dispatching planner, focusing on Reinforcement L
 
 The following is high level ER Diagram for those main entities:
 
-![erd](/erd_easy_dispatch_20210819.jpg)
+![erd](/erd_easy_dispatch_20210819.png)
 
 ## Team
 
