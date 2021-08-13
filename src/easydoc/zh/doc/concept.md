@@ -31,19 +31,24 @@ EasyDispatch需要做的工作也仅限于分配订单到人，也就是只会�
 3. 一个Worker同时只能在服务一个Job，但是一个Job里面可以有一个或者多个人工作。
 4. 不同的Job会有不同的技能要求，时间要求等。
 
+## ER 图
 
-## 订单
+下面ER图表达了主要概念之间的关系。__任务__和__工人__是派单的主题对象，他们都从属于一个__团队__。
 
-A Job is the main object that easydispatch will actively manage. The job may have different status as Unplanned, Inplanned, Planned. 
+![erd](/erd_easy_dispatch_20210819.jpg)
+
+## 任务
+
+任务是Easydispatch 系统管理的主要对象。一个任务有不同的状态：Unplanned, Inplanned, Planned. 
 
 There maybe different types of jobs, especially the composite job and the atom job. Other high level objects like Appointments, Worker's Leave Event are also treated as jobs.
 
 
 
-### Planning Status
+### 任务状态
 
-Planning Status for a job. 
-- U == Un-planned. When is Job is U status, the scheduled information is not ignored. 
+系统中区别对待下面4中不同状态：
+- U == Un-planned，未派单. When is Job is U status, the scheduled information is not ignored. 
 - I == In-planning. When is Job is I status, the scheduled attributes must have valid values. 
 - P == Planned. When is Job is P status, it is treated as fixed agreement for both worker assignment and datetime. The easydispatch engine will not modify its scheduling information.  
 - C == Completed. When is Job is C status, it will be removed. In future, it will be moved to historical storage. DO NOT USE THIS STATUS. 
@@ -62,7 +67,7 @@ You can save all customized job attributes into a flex_form_data. Those data wil
 The flex form data from jobs and workers are accessible by the rule and agent plugins. Each different business plugins may require different flexible form data attributes.
 
 
-## Worker
+## 工人
 
 A worker may have different names in different business problem, like technicians, service engieers, delivery couriers, postman etc. One worker can work on different jobs at different time. Each worker can work on only one job at each time.
 

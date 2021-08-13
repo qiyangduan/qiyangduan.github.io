@@ -14,9 +14,17 @@ EasyDispatch is a field service dispatching planner, focusing on Reinforcement L
   - Job Skill Level
   - Job Skill Catagories
 
+## ER Diagram
+
+The following is high level ER Diagram for those main entities:
+
+![erd](/erd_easy_dispatch_20210819.jpg)
+
 ## Team
 
 A team is the scope of one dispatching planner instance. The jobs in each team will be assigned to workers in the same team.
+
+A team has a Flex Form attribute.
 
 ## Worker
 
@@ -35,8 +43,8 @@ There maybe different types of jobs, especially the composite job and the atom j
 ### Planning Status
 
 Planning Status for a job. 
-- U == Un-planned. When is Job is U status, the scheduled information is not ignored. 
-- I == In-planning. When is Job is I status, the scheduled attributes must have valid values. 
+- U == Un-planned. When is Job is U status, the scheduled information is ignored and Easydispatch will dispatch this job according to business rules and convert it to Inplanning. 
+- I == In-planning. When is Job is I status, the scheduled attributes must have valid values. Easydispatch is allowed to change this status. 
 - P == Planned. When is Job is P status, it is treated as fixed agreement for both worker assignment and datetime. The easydispatch engine will not modify its scheduling information.  
 - C == Completed. When is Job is C status, it will be removed. In future, it will be moved to historical storage. DO NOT USE THIS STATUS. 
 
